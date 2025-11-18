@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🚀 Dashboard de Ejecución Constante - Enlace Directo</title>
+    <meta http-equiv="refresh" content="0; url=./index-pro.html">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+        .container { 
+            background: rgba(255,255,255,0.1); 
+            padding: 40px; 
+            border-radius: 20px; 
+            backdrop-filter: blur(10px);
+            max-width: 500px;
+            width: 90%;
+            text-align: center;
+        }
+        .logo { font-size: 4em; margin-bottom: 20px; }
+        h1 { font-size: 2.2em; margin-bottom: 20px; }
+        .loading { 
+            animation: pulse 1.5s infinite;
+            margin: 20px 0;
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+        .btn { 
+            background: #4CAF50; 
+            color: white; 
+            padding: 15px 30px; 
+            border: none; 
+            border-radius: 10px; 
+            font-size: 18px; 
+            cursor: pointer; 
+            margin: 10px;
+            text-decoration: none;
+            display: inline-block;
+            transition: background 0.3s;
+        }
+        .btn:hover { background: #45a049; }
+        .features {
+            background: rgba(255,255,255,0.1);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            text-align: left;
+        }
+        .features ul { list-style: none; padding: 0; }
+        .features li { margin: 8px 0; padding-left: 25px; position: relative; }
+        .features li:before { content: "✅"; position: absolute; left: 0; }
+        .mobile-warning {
+            background: rgba(255,193,7,0.2);
+            border: 2px solid #FFC107;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        .countdown {
+            font-size: 2em;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">🚀</div>
+        <h1>Dashboard de Ejecución Constante</h1>
+        
+        <div class="loading">
+            <div class="countdown" id="countdown">5</div>
+            <p>Redirigiendo a tu dashboard...</p>
+        </div>
+
+        <div class="features">
+            <h3>📊 Tu Sistema Completo:</h3>
+            <ul>
+                <li>5 Bloques de Energía con timers automáticos</li>
+                <li>12 Mejoras implementadas y funcionales</li>
+                <li>Dashboard de estadísticas con gráficos</li>
+                <li>Modo Pomodoro integrado</li>
+                <li>Sistema de logros y rachas</li>
+                <li>Widget flotante para móvil</li>
+                <li>Persistencia automática (365 días)</li>
+                <li>Modo oscuro/claro</li>
+            </ul>
+        </div>
+
+        <div class="mobile-warning">
+            <h3>📱 Para Móvil:</h3>
+            <p>Una vez que cargue, selecciona <strong>"Agregar a pantalla de inicio"</strong> para usarlo como app nativa</p>
+        </div>
+
+        <a href="./index-pro.html" class="btn">⚡ ACCEDER DIRECTAMENTE</a>
+        
+        <div style="margin-top: 30px; font-size: 0.9em; opacity: 0.8;">
+            <p>🔄 Los datos se guardan automáticamente</p>
+            <p>📱 Optimizado para móvil y desktop</p>
+            <p>⚡ Funciona offline una vez cargado</p>
+        </div>
+    </div>
+
+    <script>
+        let countdown = 5;
+        const countdownEl = document.getElementById('countdown');
+        
+        const timer = setInterval(() => {
+            countdown--;
+            countdownEl.textContent = countdown;
+            
+            if (countdown <= 0) {
+                clearInterval(timer);
+                window.location.href = './index-pro.html';
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
